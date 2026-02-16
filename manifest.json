@@ -1,0 +1,61 @@
+{
+  "manifest_version": "0.4",
+  "name": "@nimblebraininc/workspace-tools",
+  "version": "0.1.0",
+  "description": "Git-backed workspace tools for AI agents: file ops, commits, search, and skill validation",
+  "author": {
+    "name": "NimbleBrain Inc",
+    "email": "hello@nimblebrain.ai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NimbleBrainInc/mcp-workspace-tools"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "mcp_workspace_tools.server",
+    "mcp_config": {
+      "command": "python",
+      "args": ["-m", "mcp_workspace_tools.server"],
+      "env": {
+        "REPO_PATH": "${user_config.repo_path}",
+        "TENANT_ID": "${user_config.tenant_id}"
+      }
+    }
+  },
+  "user_config": {
+    "repo_path": {
+      "type": "string",
+      "title": "Repository Path",
+      "description": "Path to the git repository root",
+      "required": true
+    },
+    "tenant_id": {
+      "type": "string",
+      "title": "Tenant ID",
+      "description": "Tenant identifier (optional)",
+      "required": false
+    }
+  },
+  "tools": [
+    { "name": "file_read", "description": "Read a file from the repo" },
+    { "name": "file_write", "description": "Write content to a file (creates parents, stages)" },
+    { "name": "file_list", "description": "List tracked files with optional filters" },
+    { "name": "file_delete", "description": "Delete a file and stage the deletion" },
+    { "name": "git_commit", "description": "Commit staged changes with secret scanning" },
+    { "name": "index_query", "description": "Full-text search and entity resolution" },
+    { "name": "skill_validate", "description": "Validate a skill manifest YAML" }
+  ],
+  "_meta": {
+    "org.mpaktrust": {
+      "mtf_version": "0.1",
+      "permissions": {
+        "filesystem": "write",
+        "network": "outbound",
+        "environment": "read",
+        "subprocess": "none",
+        "native": "none"
+      }
+    }
+  }
+}
