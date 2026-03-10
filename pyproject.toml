@@ -1,6 +1,6 @@
 [project]
 name = "mcp-workspace-tools"
-version = "0.1.0"
+version = "0.1.1"
 description = "Git-backed workspace tools for AI agents: file ops, commits, search, and skill validation"
 readme = "README.md"
 license = {text = "MIT"}

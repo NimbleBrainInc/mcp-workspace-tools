@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.4",
   "name": "@nimblebraininc/workspace-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Git-backed workspace tools for AI agents: file ops, commits, search, and skill validation",
   "author": {
     "name": "NimbleBrain Inc",
@@ -16,7 +16,10 @@
     "entry_point": "mcp_workspace_tools.server",
     "mcp_config": {
       "command": "python",
-      "args": ["-m", "mcp_workspace_tools.server"],
+      "args": [
+        "-m",
+        "mcp_workspace_tools.server"
+      ],
       "env": {
         "REPO_PATH": "${user_config.repo_path}",
         "TENANT_ID": "${user_config.tenant_id}"
@@ -38,13 +41,34 @@
     }
   },
   "tools": [
-    { "name": "file_read", "description": "Read a file from the repo" },
-    { "name": "file_write", "description": "Write content to a file (creates parents, stages)" },
-    { "name": "file_list", "description": "List tracked files with optional filters" },
-    { "name": "file_delete", "description": "Delete a file and stage the deletion" },
-    { "name": "git_commit", "description": "Commit staged changes with secret scanning" },
-    { "name": "index_query", "description": "Full-text search and entity resolution" },
-    { "name": "skill_validate", "description": "Validate a skill manifest YAML" }
+    {
+      "name": "file_read",
+      "description": "Read a file from the repo"
+    },
+    {
+      "name": "file_write",
+      "description": "Write content to a file (creates parents, stages)"
+    },
+    {
+      "name": "file_list",
+      "description": "List tracked files with optional filters"
+    },
+    {
+      "name": "file_delete",
+      "description": "Delete a file and stage the deletion"
+    },
+    {
+      "name": "git_commit",
+      "description": "Commit staged changes with secret scanning"
+    },
+    {
+      "name": "index_query",
+      "description": "Full-text search and entity resolution"
+    },
+    {
+      "name": "skill_validate",
+      "description": "Validate a skill manifest YAML"
+    }
   ],
   "_meta": {
     "org.mpaktrust": {

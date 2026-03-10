@@ -2,7 +2,7 @@
   "$schema": "https://schemas.nimblebrain.ai/v1/nimblebrain-server.schema.json",
   "name": "ai.nimblebrain/workspace-tools",
   "description": "Git-backed workspace tools for AI agents: file ops, commits, search, and skill validation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Workspace Tools MCP Server",
   "repository": {
     "url": "https://github.com/NimbleBrainInc/mcp-workspace-tools",
