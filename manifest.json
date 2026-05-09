@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.4",
   "name": "@nimblebraininc/workspace-tools",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Git-backed workspace tools for AI agents: file ops, commits, search, and skill validation",
   "author": {
     "name": "NimbleBrain Inc",
